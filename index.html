@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>로마샌드</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		body{font:normal 12px 'arial'; overflow-x:scroll;}
+		a{text-decoration:none;}
+		#wrap{width:100%;}
+		header{width:100%;border-bottom:1px solid #ddd;position:fixed;z-index:12; background-color:rgba(255,255,255,0.5);}
+		#header{width:1180px; height:40px; margin:0 auto; padding:13px 0; box-sizing:border-box; }
+		#header #lnb{float:left;}
+		#header #gnb{float:right;}
+		#header a{color:#808080; display:block; transition:1s;}
+		#header a:hover{color:#000;}
+		#header li{float:left; list-style:none; margin:0 10px; font-family: 'Montserrat', sans-serif;}
+		#header input[type=text]{width:148px; height:24px; border:0;}
+		#header label{visibility:hidden;}
+		#header form{position:relative;top:0px;right:23px;}
+		#header #gnb li:nth-child(4){width:175px; height:26px; border:1px solid #ddd;position:relative;top:-7px;}
+		#header .btn {background-color:#fff; color:#ddd;padding:4px 6px; font-size: 14px; cursor:pointer; position:absolute;top:0;right:-23px; border:none;}
+
+		#banner{width:100%; height:250px; border-bottom:1px solid #ddd;}
+		#banner #banner_in{width:1180px; margin:0 auto;text-align:center; position:relative;}
+		#banner_in .container{display:inline-block; opacity:1; }
+		#banner_in .container:hover{opacity:0;}
+		#banner_in .overlay{display:inline-block; opacity:0; position:absolute;top:0;left:50%; margin-left:-200px;}
+		#banner_in .overlay:hover{opacity:1;}
+
+		#menu{width:100%; height:40px; border-bottom:1px solid #ddd;}
+		#menu_in{width:1180px; margin:0 auto; text-align:center; padding:12px 0; box-sizing:border-box;}
+		#menu_in li{display:inline-block; list-style:none; margin:0 30px; font-weight:bold; font-family: 'Montserrat', sans-serif;}
+		#menu_in a{color:#000; transition:1s;}
+		#menu_in a:hover{color:#ccc;}
+
+		#anime{width:100%; height:670px; overflow:hidden;}
+		#anime_in{width:1180px; margin:0 auto;position:relative;}
+		#anime_in p{width:1180px; height:670px; position:absolute;top:0;left:0; animation:ani 20s infinite;}
+		@keyframes ani{
+			0%{background-image:url(images/anime1.jpg);}
+			8%{background-image:url(images/anime1.jpg);}
+			12%{background-image:url(images/anime2.jpg);}
+			28%{background-image:url(images/anime2.jpg);}
+			32%{background-image:url(images/anime3.jpg);}
+			48%{background-image:url(images/anime3.jpg);}
+			52%{background-image:url(images/anime4.jpg);}
+			68%{background-image:url(images/anime4.jpg);}
+			72%{background-image:url(images/anime5.jpg);}
+			88%{background-image:url(images/anime5.jpg);}
+			92%{background-image:url(images/anime1.jpg);}
+			100%{background-image:url(images/anime1.jpg);}
+		}
+
+		#notice{width:100%; height:300px;}
+		#notice_in{width:1180px; margin:50px auto;}
+		#notice_in p,#notice_in dl{float:left; width:390px; height:200px; margin-right:5px;}
+		#notice_in .roma{background-color:#f9f6f1; text-align:center;box-sizing:border-box; padding:50px 0;}
+		#notice_in a{color:#333;}
+		#notice_in .roma dt{font-family: 'Open Sans', sans-serif; font-size:18px; letter-spacing: 5px; display:inline-block; border-bottom:2px solid #333; padding:10px 15px; margin-bottom:10px;}
+		#notice_in .notice{margin-right:0;}
+		#notice_in .banner{width:390px; height:200px; animation:ani2 5s infinite;}		
+		@keyframes ani2{
+			0%{background-image:url(images/notice2-1.jpg);}
+			20%{background-image:url(images/notice2-1.jpg);}
+			30%{background-image:url(images/notice2-2.jpg);}
+			70%{background-image:url(images/notice2-2.jpg);}
+			80%{background-image:url(images/notice2-1.jpg);}
+			100%{background-image:url(images/notice2-1.jpg);}
+			}
+		#notice_in .notice{border:1px solid #ddd; padding: 20px; box-sizing:border-box; position:relative;}
+		#notice_in .notice span{float:right;position:absolute;top:20px;right:20px;  font-size:11px; color:#828282;}
+		#notice_in .notice dt{margin-bottom:15px; font-family: 'Montserrat', sans-serif; font-weight:bold; letter-spacing:2px;}
+		#notice_in .notice dd{margin-bottom:10px; border-bottom:1px dotted #ddd;}
+
+		#new{width:100%;}
+		#new_in{width:1180px; margin:0 auto;}
+
+
+
+
+
+
+	</style>
+	<!--서치 아이콘 링크-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--폰트 링크-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrap"><!--#wrap-->
+		<header>
+			<div id="header"><!--#header-->
+				<ul id="lnb">
+					<li><a href="#">BOOKMARK</a></li>
+					<li><a href="#">LOGIN</a></li>
+					<li><a href="#">JOIN US</a></li>
+					<li><a href="#">MYPAGE</a></li>
+					<li><a href="#">ORDER</a></li>
+					<li><a href="#">CART</a></li>
+				</ul>
+				<ul id="gnb">
+					<li><a href="#">NOTICE</a></li>
+					<li><a href="#">Q&amp;A</a></li>
+					<li><a href="#">REVIEW</a></li>
+					<li>
+						<form>
+							<label for="serch">검색</label><input type="text" id="search">
+							<button class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+					</li>
+				</ul>
+			</div><!--#header-->			
+		</header>
+
+		<div id="banner"><!--#banner-->
+			<div id="banner_in">
+				<a href="#">
+					<h1><img class="container" src="images/main_banner1.jpg" alt="메인배너">
+					<img class="overlay" src="images/main_banner1_hover.jpg" alt="오버레이"></h1>
+				</a>
+			</div><!--#banner-->
+		</div>
+
+		<div id="menu"><!--#menu-->
+			<div id="menu_in">
+			<ul>
+				<li><a href="#">BOSS</a></li>
+				<li><a href="#">BASIC</a></li>
+				<li><a href="#">MIX</a></li>
+				<li><a href="#">FINE</a></li>
+				<li><a href="#">굿똥</a></li>
+			</ul>				
+			</div>
+		</div><!--#menu-->
+
+		<div id="anime"><!--#anime-->	
+			<div id="anime_in">
+				<p>&nbsp;</p>				
+			</div>
+		</div><!--#anime-->
+
+		<div id="notice"><!--#notice-->
+			<div id="notice_in"><!--#notice_in-->
+				<a href="#"><dl class="roma">
+					<dt>Roma.sand</dt>
+					<dd>회원을 위한 특별한 혜택</dd>
+				</dl></a>
+				<a href="#"><p class="banner">&nbsp;</p></a>
+				<dl class="notice">
+					<dt>NOTICE..</dt> <a href="#"><span>MORE+</span></a>
+					<dd>[일시품절] 굿똥 아이보리 컬러는 8월 15일 이후 입고예정입니다.</dd>
+					<dd>[케이캣페어] 찾아주신 분들께 감사드립니다.(+배송안내)</dd>
+					<dd>[전시회참여] 로마샌드와 굿똥이 케이캣페어2019에 참여합니다.</dd>
+					<dd>▷2019년 5월 6일 어린이날 대체 휴무안내◁</dd>
+					<dd>◈2019년 5월 1일 근로자의 날 휴무안내◈</dd>
+				</dl>
+			</div><!--#notice_in-->		
+		</div><!--#notice-->
+
+		<div id="new"><!--#new-->
+			<div id="new_in">
+				<h2>NEW ITEMS</h2>
+				<dl>
+					<dt><img src="images/n_item1.jpg" alt="신상품1" /></dt>
+					<dd>[고양이화장실]굿똥-Ⅱ</dd>
+					<dd>87,000원</dd>
+					<dd>슈퍼 빅사이즈 고양이화장실</dd>
+					<dd>내 너희의 똥간을 널리 이롭게 하리!</dd>
+					<dd><small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/n_item2.jpg" alt="신상품2" /></dt>
+					<dd>로마샌드 BOSS(프리미엄)12.6kg</dd>
+					<dd>42,000원</dd>
+					<dd>★고양이모래의 끝판왕★</dd>
+					<dd>[대용량] 먼지,굳기,탈취 모두 해결!</dd>
+					<dd><small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/n_item3.jpg" alt="신상품3" /></dt>
+					<dd>로마샌드 BOSS(프리미엄)6.3kg</dd>
+					<dd>23,000원</dd>
+					<dd>★고양이모래의 끝판왕★</dd>
+					<dd>먼지,굳기,탈취 모두 해결!</dd>
+					<dd><small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><img src="images/n_item4.jpg" alt="신상품4" /></dt>
+					<dd>로마샌드 FINE세트(7kg×2포)</dd>
+					<dd>29,000원</dd>
+					<dd>먼지적고 굳기도 좋아요!</dd>
+					<dd>고양이가 좋아해요!</dd>
+					<dd><small>best</small><small>new</small></dd>
+				</dl>
+				
+			</div><!--#new-->		
+		</div><!--#new-->
+
+		<div id="new_ani"><!--#new_ani-->			
+		</div><!--#new_ani-->
+
+		<div id="best"><!--#best-->			
+		</div><!--#best-->
+
+		<footer>			
+		</footer>
+
+	</div><!--#wrap-->
+</body>
+</html>
