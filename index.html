@@ -5,36 +5,11 @@
 	<title>로마샌드</title>
 	<style type="text/css">
 		*{margin:0; padding:0;}
-		body{font:normal 12px 'arial'; overflow-x:scroll;}
+		body{font:normal 12px 'arial';}
 		a{text-decoration:none;}
 		#wrap{width:100%;}
-		header{width:100%;border-bottom:1px solid #ddd;position:fixed;z-index:12; background-color:rgba(255,255,255,0.5);}
-		#header{width:1180px; height:40px; margin:0 auto; padding:13px 0; box-sizing:border-box; }
-		#header #lnb{float:left;}
-		#header #gnb{float:right;}
-		#header a{color:#808080; display:block; transition:1s;}
-		#header a:hover{color:#000;}
-		#header li{float:left; list-style:none; margin:0 10px; font-family: 'Montserrat', sans-serif;}
-		#header input[type=text]{width:148px; height:24px; border:0;}
-		#header label{visibility:hidden;}
-		#header form{position:relative;top:0px;right:23px;}
-		#header #gnb li:nth-child(4){width:175px; height:26px; border:1px solid #ddd;position:relative;top:-7px;}
-		#header .btn {background-color:#fff; color:#ddd;padding:4px 6px; font-size: 14px; cursor:pointer; position:absolute;top:0;right:-23px; border:none;}
-
-		#banner{width:100%; height:250px; border-bottom:1px solid #ddd;}
-		#banner #banner_in{width:1180px; margin:0 auto;text-align:center; position:relative;}
-		#banner_in .container{display:inline-block; opacity:1; }
-		#banner_in .container:hover{opacity:0;}
-		#banner_in .overlay{display:inline-block; opacity:0; position:absolute;top:0;left:50%; margin-left:-200px;}
-		#banner_in .overlay:hover{opacity:1;}
-
-		#menu{width:100%; height:40px; border-bottom:1px solid #ddd;}
-		#menu_in{width:1180px; margin:0 auto; text-align:center; padding:12px 0; box-sizing:border-box;}
-		#menu_in li{display:inline-block; list-style:none; margin:0 30px; font-weight:bold; font-family: 'Montserrat', sans-serif;}
-		#menu_in a{color:#000; transition:1s;}
-		#menu_in a:hover{color:#ccc;}
-
-		#anime{width:100%; height:670px; overflow:hidden;}
+		
+		#anime{width:100%; height:670px;}
 		#anime_in{width:1180px; margin:0 auto;position:relative;}
 		#anime_in p{width:1180px; height:670px; position:absolute;top:0;left:0; animation:ani 20s infinite;}
 		@keyframes ani{
@@ -52,7 +27,7 @@
 			100%{background-image:url(images/anime1.jpg);}
 		}
 
-		#notice{width:100%; height:300px;}
+		#notice{width:100%; height:250px;}
 		#notice_in{width:1180px; margin:50px auto;}
 		#notice_in p,#notice_in dl{float:left; width:390px; height:200px; margin-right:5px;}
 		#notice_in .roma{background-color:#f9f6f1; text-align:center;box-sizing:border-box; padding:50px 0;}
@@ -68,13 +43,30 @@
 			80%{background-image:url(images/notice2-1.jpg);}
 			100%{background-image:url(images/notice2-1.jpg);}
 			}
-		#notice_in .notice{border:1px solid #ddd; padding: 20px; box-sizing:border-box; position:relative;}
+		#notice_in .notice{border:1px solid #ddd; padding: 20px; box-sizing:border-box; position:relative; font:bold 11px'나눔바른고딕';}
 		#notice_in .notice span{float:right;position:absolute;top:20px;right:20px;  font-size:11px; color:#828282;}
-		#notice_in .notice dt{margin-bottom:15px; font-family: 'Montserrat', sans-serif; font-weight:bold; letter-spacing:2px;}
-		#notice_in .notice dd{margin-bottom:10px; border-bottom:1px dotted #ddd;}
+		#notice_in .notice dt{margin-bottom:20px; font-family: 'Montserrat', sans-serif; font-weight:bold; letter-spacing:2px;}
+		#notice_in .notice dd{margin-bottom:10px; padding-bottom:5px; border-bottom:1px dotted #ddd;}
+		#notice_in .notice dd:first-of-type>a{color:red;}
+		#notice_in .notice dd:nth-of-type(2)>a{color:#666;}
+		#notice_in .notice dd:nth-of-type(4)>a{color:red;}
 
-		#new{width:100%;}
-		#new_in{width:1180px; margin:0 auto;}
+		#new{width:100%; height:900px;}
+		#new_in{width:1180px; margin:0 auto; text-align:center; margin-top:-40px;}
+		#new_in .bd{width:300px; border-bottom:2px solid #000;display:inline-block; }
+		#new_in .title{letter-spacing:5px; font-weight:lighter; padding:15px; margin-bottom:30px;}
+		#new_in dl{float:left;margin:10px 5px; width:280px; height:360px;}
+		#new_in dl:nth-of-type(4n){margin-right:0;}
+		#new_in dt{border-bottom:2px solid #fff; margin-bottom:15px;}
+		#new_in dd{margin-bottom:4px; font-weight:bold;}
+		#new_in dd:first-of-type{font-weight:lighter;}
+		#new_in dd:nth-of-type(2){color:#3399ff;}
+		#new_in a:hover{border-bottom:2px solid #000;}
+		#new_in small{border:1px solid black; padding:0 3px;}
+		#new_in .best{background-color:#262626;color:#fff;}
+
+		#new_ani{width:100%; background-color:#f7f7f7;}
+		#new_ani_in{width:1180px; height:400px; margin:0 auto;}
 
 
 
@@ -87,6 +79,8 @@
 	<!--폰트 링크-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+	<!--CSS 링크-->
+	<link rel="stylesheet" type="text/css" href="css/header.css"> <!--header-->
 </head>
 
 <body>
@@ -116,13 +110,13 @@
 		</header>
 
 		<div id="banner"><!--#banner-->
-			<div id="banner_in">
+			<div id="banner_in"><!--#banner_in-->
 				<a href="#">
-					<h1><img class="container" src="images/main_banner1.jpg" alt="메인배너">
-					<img class="overlay" src="images/main_banner1_hover.jpg" alt="오버레이"></h1>
+					<img class="container" src="images/main_banner1.jpg" alt="메인배너">
+					<img class="overlay" src="images/main_banner1_hover.jpg" alt="오버레이">
 				</a>
-			</div><!--#banner-->
-		</div>
+			</div><!--#banner_in-->
+		</div><!--#banner-->
 
 		<div id="menu"><!--#menu-->
 			<div id="menu_in">
@@ -151,20 +145,21 @@
 				<a href="#"><p class="banner">&nbsp;</p></a>
 				<dl class="notice">
 					<dt>NOTICE..</dt> <a href="#"><span>MORE+</span></a>
-					<dd>[일시품절] 굿똥 아이보리 컬러는 8월 15일 이후 입고예정입니다.</dd>
-					<dd>[케이캣페어] 찾아주신 분들께 감사드립니다.(+배송안내)</dd>
-					<dd>[전시회참여] 로마샌드와 굿똥이 케이캣페어2019에 참여합니다.</dd>
-					<dd>▷2019년 5월 6일 어린이날 대체 휴무안내◁</dd>
-					<dd>◈2019년 5월 1일 근로자의 날 휴무안내◈</dd>
+					<dd><a href="#">[일시품절] 굿똥 아이보리 컬러는 8월 15일 이후 입고예정입니다.</a></dd>
+					<dd><a href="#">[케이캣페어] 찾아주신 분들께 감사드립니다.(+배송안내)</a></dd>
+					<dd><a href="#">[전시회참여] 로마샌드와 굿똥이 케이캣페어2019에 참여합니다.</a></dd>
+					<dd><a href="#">▷2019년 5월 6일 어린이날 대체 휴무안내◁</a></dd>
+					<dd><a href="#">◈2019년 5월 1일 근로자의 날 휴무안내◈</a></dd>
 				</dl>
 			</div><!--#notice_in-->		
 		</div><!--#notice-->
 
 		<div id="new"><!--#new-->
 			<div id="new_in">
-				<h2>NEW ITEMS</h2>
+				<h2 class="bd">&nbsp;</h2>
+				<h2 class="title">NEW ITEMS</h2>
 				<dl>
-					<dt><img src="images/n_item1.jpg" alt="신상품1" /></dt>
+					<dt><a href="#"><img src="images/n_item1.jpg" alt="신상품1" /></a></dt>
 					<dd>[고양이화장실]굿똥-Ⅱ</dd>
 					<dd>87,000원</dd>
 					<dd>슈퍼 빅사이즈 고양이화장실</dd>
@@ -172,7 +167,7 @@
 					<dd><small>new</small></dd>
 				</dl>
 				<dl>
-					<dt><img src="images/n_item2.jpg" alt="신상품2" /></dt>
+					<dt><a href="#"><img src="images/n_item2.jpg" alt="신상품2" /></a></dt>
 					<dd>로마샌드 BOSS(프리미엄)12.6kg</dd>
 					<dd>42,000원</dd>
 					<dd>★고양이모래의 끝판왕★</dd>
@@ -180,7 +175,7 @@
 					<dd><small>new</small></dd>
 				</dl>
 				<dl>
-					<dt><img src="images/n_item3.jpg" alt="신상품3" /></dt>
+					<dt><a href="#"><img src="images/n_item3.jpg" alt="신상품3" /></a></dt>
 					<dd>로마샌드 BOSS(프리미엄)6.3kg</dd>
 					<dd>23,000원</dd>
 					<dd>★고양이모래의 끝판왕★</dd>
@@ -188,18 +183,52 @@
 					<dd><small>new</small></dd>
 				</dl>
 				<dl>
-					<dt><img src="images/n_item4.jpg" alt="신상품4" /></dt>
+					<dt><a href="#"><img src="images/n_item4.jpg" alt="신상품4" /></a></dt>
 					<dd>로마샌드 FINE세트(7kg×2포)</dd>
 					<dd>29,000원</dd>
 					<dd>먼지적고 굳기도 좋아요!</dd>
 					<dd>고양이가 좋아해요!</dd>
-					<dd><small>best</small><small>new</small></dd>
+					<dd><small class="best">best</small> <small>new</small></dd>
 				</dl>
-				
+				<dl>
+					<dt><a href="#"><img src="images/n_item5.jpg" alt="신상품5" /></a></dt>
+					<dd>로마샌드 BASIC세트(7kg×2포)</dd>
+					<dd>29,000원</dd>
+					<dd>사막호 방지 굵은 입자 벤토나이트</dd>
+					<dd>먼지날림이 적어요~</dd>
+					<dd><small class="best">best</small> <small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><a href="#"><img src="images/n_item6.jpg" alt="신상품6" /></a></dt>
+					<dd>로마샌드 MIX세트(7kg×2포)</dd>
+					<dd>29,000원</dd>
+					<dd>[신규출시] 응고와 사막호를 동시에!</dd>
+					<dd>기존 로마샌드의 장점만 모았어요!</dd>
+					<dd><small class="best">best</small> <small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><a href="#"><img src="images/n_item7.jpg" alt="신상품7" /></a></dt>
+					<dd>로마샌드 2개묶음세트(7kg×2포)</dd>
+					<dd>29,000원</dd>
+					<dd>[신규출시]입자별 원하는대로 2개묶음</dd>
+					<dd>무료배송은 덤이에요!</dd>
+					<dd><small class="best">best</small> <small>new</small></dd>
+				</dl>
+				<dl>
+					<dt><a href="#"><img src="images/n_item8.jpg" alt="신상품8" /></a></dt>
+					<dd>로마샌드 MIX(혼합입자)14kg</dd>
+					<dd>28,000원</dd>
+					<dd>[대용량]응고와 사막호를 동시에!</dd>
+					<dd>기존 로마샌드의 장점만 모았어요!</dd>
+					<dd><small class="best">best</small> <small>new</small></dd>
+				</dl>
 			</div><!--#new-->		
 		</div><!--#new-->
 
-		<div id="new_ani"><!--#new_ani-->			
+		<div id="new_ani"><!--#new_ani-->	
+		<div id="new_ani_in"><!--#new_ani-->
+			
+		</div><!--#new_ani-->		
 		</div><!--#new_ani-->
 
 		<div id="best"><!--#best-->			
